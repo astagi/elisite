@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
 import '../styles/global.css'
 ---
 
@@ -12,11 +15,10 @@ import '../styles/global.css'
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Header />
 		<slot />
+		<Footer />
 	</body>
-	<footer>
-		This is a footer test for a short page
-	</footer>
 </html>
 
 <style>
