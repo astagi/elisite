@@ -1,23 +1,13 @@
----
-import ButtonLink from './ButtonLink.astro';
----
-
 <section
     class="relative items-center flex"
     style="min-height: 400px;"
 >
     <!-- - img-->
-    <div
-        class="absolute w-full h-full top-0 overflow-hidden"
-    >
-        <div
-            class="h-full"
-            style="padding-bottom: inherit; position: initial;"
-        >
-            <div
-                class="absolute top-0 left-0 w-full h-full"   
-            >
+    <div class="absolute w-full h-full top-0 overflow-hidden">
+        <div class="h-full" style="padding-bottom: inherit; position: initial;">
+            <div class="absolute top-0 left-0 w-full h-full">
                 <img
+                    class="object-cover h-100 lg:h-auto"
                     src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"
                     title="titolo immagine"
                     alt="descrizione immagine"
@@ -26,23 +16,9 @@ import ButtonLink from './ButtonLink.astro';
         </div>
     </div>
     <!-- - texts-->
-    <div class="w-full pr-40 pl-40 mr-auto ml-auto">
-        <div class="row">
-            <div class="col-12">
-                <div class="relative">
-                    <span class="it-category">Titolo occhiello</span>
-                    <h2>Titolo della sezione</h2>
-                    <p class="d-none d-lg-block">
-                        Platea dictumst vestibulum rhoncus est pellentesque elit
-                        ullamcorper dignissim cras. Dictum sit amet justo donec
-                        enim diam vulputate ut. Eu nisl nunc mi ipsum faucibus.
-                    </p>
-                    <div class="it-btn-container">
-                        <a class="btn btn-sm btn-secondary" href="#"
-                            >Azione primaria</a>
-                    </div>
-                </div>
-            </div>
+    <div class="w-full pr-10 pl-10 mr-auto ml-auto">
+        <div class="relative">
+            <slot></slot>
         </div>
     </div>
 </section>
