@@ -3,28 +3,19 @@ import ButtonLink from './ButtonLink.astro';
 ---
 
 <section
-    style="        position: relative;
-        min-height: 400px;
-        align-items: center; display: flex;"
+    class="relative items-center flex"
+    style="min-height: 400px;"
 >
     <!-- - img-->
     <div
-        style="position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0; overflow: hidden;"
+        class="absolute w-full h-full top-0 overflow-hidden"
     >
         <div
-            style="padding-bottom: inherit;
-    height: 100%;
-    position: initial;"
+            class="h-full"
+            style="padding-bottom: inherit; position: initial;"
         >
             <div
-                style="    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;"
+                class="absolute top-0 left-0 w-full h-full"   
             >
                 <img
                     src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"
@@ -35,16 +26,10 @@ import ButtonLink from './ButtonLink.astro';
         </div>
     </div>
     <!-- - texts-->
-    <div
-        style="width: 100%;
-    padding-right: 10rem;
-    padding-left: 10rem;
-    margin-right: auto;
-    margin-left: auto;"
-    >
+    <div class="w-full pr-40 pl-40 mr-auto ml-auto">
         <div class="row">
             <div class="col-12">
-                <div style="position: relative;">
+                <div class="relative">
                     <span class="it-category">Titolo occhiello</span>
                     <h2>Titolo della sezione</h2>
                     <p class="d-none d-lg-block">

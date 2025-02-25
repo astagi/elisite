@@ -1,8 +1,27 @@
 ---
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import CardBox from '../components/CardBox.astro';
+
 ---
 
 <Layout>
-	<Hero />
+  <Hero />
+  <div>
+    <h2>Cosa offro</h2>
+    <div class="columns-1 lg:columns-2 gap-8">
+      <CardBox title="Titolo 1">
+        <p>
+          Person-centred and trauma-focused psychotherapy for individuals over the age of 18. Meetings are offered virtually or over the phone in 50 or 75 minute increments.
+        </p>
+      </CardBox>
+      <CardBox title="Titolo 2">
+        <p>
+          Person-centred and trauma-focused psychotherapy for individuals over the age of 18. Meetings are offered virtually or over the phone in 50 or 75 minute increments.
+        </p>
+      </CardBox>
+    </div>
+    <ButtonLink>Informazioni</ButtonLink>
+  </div>
 </Layout>
