@@ -1,3 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import studioPhoto  from '../assets/foto/studio.jpg';
+---
+
 <section
     class="relative items-center flex"
     style="min-height: 400px;"
@@ -6,9 +11,9 @@
     <div class="absolute w-full h-full top-0 overflow-hidden">
         <div class="h-full" style="padding-bottom: inherit; position: initial;">
             <div class="absolute top-0 left-0 w-full h-full">
-                <img
+                <Image
                     class="object-cover h-100 lg:h-auto"
-                    src="https://animals.sandiegozoo.org/sites/default/files/2016-08/animals_hero_mountains.jpg"
+                    src={studioPhoto}
                     title="titolo immagine"
                     alt="descrizione immagine"
                 />

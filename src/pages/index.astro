@@ -3,7 +3,10 @@ import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import ButtonLink from '../components/ButtonLink.astro';
 import CardBox from '../components/CardBox.astro';
+import Section from '../components/Section.astro';
+
 import { Image } from 'astro:assets';
+import mainPhoto  from '../assets/foto/elisa_soldi_foto.jpg';
 ---
 
 <Layout>
@@ -11,7 +14,7 @@ import { Image } from 'astro:assets';
     <h2>Titolo della sezione</h2>
     <ButtonLink>Prenota</ButtonLink>
   </Hero>
-  <div>
+  <Section>
     <h2>Cosa offro</h2>
     <div class="columns-1 lg:columns-2 gap-8">
       <CardBox title="Titolo 1">
@@ -26,21 +29,25 @@ import { Image } from 'astro:assets';
       </CardBox>
     </div>
     <ButtonLink>Informazioni</ButtonLink>
-  </div>
-  <div class="columns-1 lg:columns-2 gap-8 bg-primary">
-    <Image src={'https://images.squarespace-cdn.com/content/v1/638596936334031d32bbb612/70e56458-0de1-4abf-bc9c-0d7a2d25b869/Connected-Healing-Psychotherapy-Andrea-Heald-Headshot.jpg?format=2500w'} height={700} width={200} alt="Elisa Soldi immagine" />
-    <div>
-      <h2>Chi sono</h2>
+  </Section>
+  <Section background="bg-primary">
+    <div class="columns-1 lg:columns-2 gap-8">
       <div>
-        <p>
-          Hi there! I’m Elisa, Thank you for landing on my site.
-          <br><br>
-          I offer client-centred and personally tailored psychotherapy services for those living in the Vaughan and Etobicoke area, as well as virtually all across Ontario, and am passionate about supporting women along their healing journeys. 
-          <br><br>
-          It takes courage to reach out for support, and finding a therapist who you feel connected and safe with through this process is so important. That is why I always offer a complimentary 15 minute phone call where we can get to know each other better and discover if we might be a good fit.
-        </p>
-        <ButtonLink>Informazioni</ButtonLink>
+        <Image src={mainPhoto} width={200} alt="Elisa Soldi immagine" />
+      </div>
+      <div>
+        <h2>Chi sono</h2>
+        <div>
+          <p>
+            Hi there! I’m Elisa, Thank you for landing on my site.
+            <br><br>
+            I offer client-centred and personally tailored psychotherapy services for those living in the Vaughan and Etobicoke area, as well as virtually all across Ontario, and am passionate about supporting women along their healing journeys. 
+            <br><br>
+            It takes courage to reach out for support, and finding a therapist who you feel connected and safe with through this process is so important. That is why I always offer a complimentary 15 minute phone call where we can get to know each other better and discover if we might be a good fit.
+          </p>
+          <ButtonLink>Informazioni</ButtonLink>
+        </div>
       </div>
     </div>
-  </div>
+  </Section>
 </Layout>

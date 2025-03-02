@@ -1,14 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import ButtonLink from './ButtonLink.astro';
-import Logo  from '../assets/logo.svg';
+import Logo  from '../assets/sign-logo.svg';
 ---
 
 <header>
     <nav class="bg-primary px-4 lg:px-6 py-2.5">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <a href="" class="flex items-center">
-                <Image src={Logo} class="mr-3 h-6 sm:h-9" alt="Elisa Soldi Logo" />
+                <Image src={Logo} class="" alt="Elisa Soldi Logo" style="width: 100px;height: auto;" />
             </a>
             <div class="flex items-center lg:order-2">
                 <ButtonLink>Prenota</ButtonLink>
