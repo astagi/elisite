@@ -7,13 +7,20 @@ import Section from '../components/Section.astro';
 
 import { Image } from 'astro:assets';
 import mainPhoto  from '../assets/foto/elisa_soldi_foto.jpg';
+import Logo from '../assets/sign.svg';
+
 ---
 
 <Layout>
   <Hero>
     <Section>
-      <h1 class="mb-6">A safe space for connection, compassion, and healing.</h1>
-      <ButtonLink>Prenota</ButtonLink>
+      <div class="text-center lg:text-left">
+        <Logo fill="currentColor" class="max-w-full"/>
+        <br/>
+        <h1 class="mb-6">A safe space for connection, compassion, and healing.</h1>
+        <br/>
+        <ButtonLink>Prenota</ButtonLink>
+      </div>
     </Section>
   </Hero>
   <Section>
