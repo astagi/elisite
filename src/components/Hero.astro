@@ -9,17 +9,13 @@ import studioPhoto  from '../assets/foto/studio.jpg';
 >
     <!-- - img-->
     <div class="absolute w-full h-full top-0 overflow-hidden">
-        <div class="h-full" style="padding-bottom: inherit; position: initial;">
-            <div class="absolute top-0 left-0 w-full h-full">
-                <Image
-                    class="object-cover h-100 lg:h-auto"
-                    src={studioPhoto}
-                    title="titolo immagine"
-                    alt="descrizione immagine"
-                />
-                <span class="absolute w-full h-full top-0 left-0" style="content: ''; background: rgba(238, 231, 223, .9);"></span>
-            </div>
-        </div>
+        <Image
+            class="h-screen w-auto hero-image max-w-none"
+            src={studioPhoto}
+            title="titolo immagine"
+            alt="descrizione immagine"
+        />
+        <span class="absolute w-full h-full top-0 left-0" style="content: ''; background: rgba(238, 231, 223, .7);"></span>
     </div>
     <!-- - texts-->
     <div class="w-full pr-10 pl-10 mr-auto ml-auto">
