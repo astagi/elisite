@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import studioPhoto  from '../assets/foto/studio.jpg';
+const { image } = Astro.props;
 ---
 
 <section
@@ -11,7 +12,7 @@ import studioPhoto  from '../assets/foto/studio.jpg';
     <div class="absolute w-full h-full top-0 overflow-hidden" style="background-color: white;">
         <Image
             class="h-screen w-auto hero-image max-w-none"
-            src={studioPhoto}
+            src={image || studioPhoto}
             title="titolo immagine"
             alt="descrizione immagine"
         />

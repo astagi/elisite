@@ -5,21 +5,27 @@ import Section from '../components/Section.astro';
 import WhatsappIcon from '../assets/whatsapp.svg';
 import EmailIcon from '../assets/mail.svg';
 import { Image } from 'astro:assets';
+import BackgroundImage from '../assets/foto/contacts.jpg'
 ---
 
 <Layout>
-  <Hero>
+  <Hero image={BackgroundImage}>
     <Section isFullHeight>
       <div class="flex flex-col items-center justify-center">
         <h1>Contatti</h1>
         <div class="columns-1 lg:columns-2 gap-8 m-8">
-            <p>
-                <Image src={WhatsappIcon} class="inline" alt="Elisa Soldi Logo" style="width: 3rem;height: auto;" />  333-3333355          
-            </p>
-            <p>
-                <Image src={EmailIcon} class="inline" alt="Elisa Soldi Logo" style="width: 3rem;height: auto;" /> 
-                elisa@gmail.com           
-            </p>
+          <div>
+            <a href="tel:+39333-3333355">
+              <Image src={WhatsappIcon} class="inline" alt="Elisa Soldi Logo" style="width: 3rem;height: auto;" />  
+              333-3333355
+            </a>
+          </div>
+          <div>
+            <a href="mailto:elisa@gmail.com">
+              <Image src={EmailIcon} class="inline" alt="Elisa Soldi Logo" style="width: 3rem;height: auto;" /> 
+              elisa@gmail.com        
+            </a>  
+          </div>
         </div>
         <p class="mb-8">Se preferisci compila i campi qua sotto per contattarmi</p>
         <form class="w-full max-w-lg">

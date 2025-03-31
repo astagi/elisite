@@ -8,6 +8,7 @@ import Section from '../components/Section.astro';
 import { Image } from 'astro:assets';
 import mainPhoto  from '../assets/foto/elisa_soldi_foto.jpg';
 import Logo from '../assets/sign.svg';
+import Expand from '../assets/expand.svg';
 
 ---
 
@@ -17,11 +18,15 @@ import Logo from '../assets/sign.svg';
       <div class="flex flex-col items-center text-center justify-center h-screen-90">
         <div class="max-w-full inline">
           <Logo fill="currentColor"  height="auto" width="70vw" class="m-auto max-w-full"/>
-          <h1>Studio psicoterapeutico</h1>
+          <h1 class="md:-mt-4">Studio psicoterapeutico</h1>
         </div>
       </div>
       <div class="text-center">
-        <a href="#me">Scopri di più</a>
+        <a href="#me">Scopri di più 
+          <span class="flex items-center justify-center">
+            <Image src={Expand} class="center" alt="Elisa Soldi Logo" style="width: 3rem;height: auto;" /> 
+          </span>
+        </a>
       </div>
     </Section>
   </Hero>
