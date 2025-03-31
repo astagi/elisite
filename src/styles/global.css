@@ -6,6 +6,7 @@
   --color-white: #FFFFFF;
   --color-primary: #F2ECE5;
   --color-accent: #CED8E4;
+  --animate-bounce: bounce 1s infinite;
 }
 
 html {
