@@ -18,7 +18,7 @@ import Expand from '../assets/expand.svg';
       <div class="flex flex-col items-center text-center justify-center h-screen-90">
         <div class="max-w-full inline">
           <Logo fill="currentColor"  height="auto" width="70vw" class="m-auto max-w-full"/>
-          <h1 class="md:-mt-4">Studio psicoterapeutico</h1>
+          <h1 class="md:-mt-4">Psicologa</h1>
         </div>
       </div>
       <div class="text-center">
@@ -52,6 +52,14 @@ import Expand from '../assets/expand.svg';
     </div>
   </Section>
   <Section background="bg-primary">
+    <!--- TODO Fare con stesso font della firma -->
+   <span class="mt-8">Testo testo testo</span>
+  </Section>
+  <Section background="bg-accent italic text-center text-xl md:text-2xl">
+    <!--- TODO Fare con stesso font della firma -->
+   <span class="mt-8">"Tutte le risorse di cui abbiamo bisogno sono nella nostra mente"</span>
+  </Section>
+  <Section background="bg-primary">
     <h2 class="text-center">Cosa offro</h2>
     <div class="columns-1 lg:columns-2 gap-8">
       <CardBox title="Titolo 1">
@@ -59,12 +67,20 @@ import Expand from '../assets/expand.svg';
           Person-centred and trauma-focused psychotherapy for individuals over the age of 18. Meetings are offered virtually or over the phone in 50 or 75 minute increments.
         </p>
       </CardBox>
-      <CardBox title="Titolo 2">
-        <p>
-          Person-centred and trauma-focused psychotherapy for individuals over the age of 18. Meetings are offered virtually or over the phone in 50 or 75 minute increments.
-        </p>
+      <CardBox title="Tutoraggio BES e DSA">
+        <div>
+          Offro supporto personalizzato per bambini e ragazzi con difficoltà scolastiche, aiutandoli a sviluppare strategie di apprendimento efficaci. Il mio lavoro si concentra su:
+          </br></br>
+          <ul class="list-disc pl-4">
+            <li>Sostegno nei compiti con metodi personalizzati e strumenti compensativi</li>
+            <li>Potenziamento delle capacità di attenzione e concentrazione</li>
+            <li>Strategie per migliorare l'organizzazione e la gestione del tempo</li>
+          </ul>
+        </div>
       </CardBox>
     </div>
+  </Section>
+  <Section background="bg-primary">
     <div class="text-center mt-6">
       <ButtonLink href="/contatti">Prenota un appuntamento</ButtonLink>
     </div>

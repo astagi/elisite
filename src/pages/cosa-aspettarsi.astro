@@ -1,0 +1,21 @@
+---
+import Hero from '../components/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+import Section from '../components/Section.astro';
+import WhatsappIcon from '../assets/whatsapp.svg';
+import EmailIcon from '../assets/mail.svg';
+import { Image } from 'astro:assets';
+import BackgroundImage from '../assets/foto/contacts.jpg'
+---
+
+<Layout>
+  <Hero image={BackgroundImage}>
+    <Section isFullHeight>
+      <div class="flex flex-col items-center justify-center">
+        <h1>Cosa aspettarsi</h1>
+        <p>Le domande più frequenti con le risposte</p>
+      </div>
+    </Section>
+    <Section background="bg-primary"></Section>
+  </Hero>
+</Layout>
