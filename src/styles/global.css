@@ -6,6 +6,7 @@
   --color-white: #FFFFFF;
   --color-primary: #F2ECE5;
   --color-accent: #CED8E4;
+  --color-shadow: #8B9CB7;
   --animate-bounce: bounce 1s infinite;
 }
 
@@ -51,7 +52,7 @@ h3 {
 }
 
 .img-shadow {
-  box-shadow: 10px 10px 10px 10px var(--color-accent);
-  -webkit-box-shadow: 10px 10px 10px 10px var(--color-accent);
-  -moz-box-shadow: 10px 10px 10px 10px var(--color-accent);
+  box-shadow: 2px 2px 2px 2px var(--color-shadow);
+  -webkit-box-shadow: 2px 2px 2px 2px var(--color-shadow);
+  -moz-box-shadow: 2px 2px 2px 2px var(--color-shadow);
 }
