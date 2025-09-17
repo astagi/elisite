@@ -36,14 +36,20 @@ import Expand from '../assets/expand.svg';
           <Image src={mainPhoto} width={200} class="img-shadow mb-8 border-none rounded mx-auto md:mx-0" alt="Elisa Soldi immagine" />
         </div>
         <div class="flex-2 md:mt-4">
-          <h2>Chi sono</h2>
+          <h2>Su di me</h2>
           <div>
             <p>
-              Hi there! I'm Elisa, Thank you for landing on my site.
-              <br><br>
-              I offer client-centred and personally tailored psychotherapy services for those living in the Vaughan and Etobicoke area, as well as virtually all across Ontario, and am passionate about supporting women along their healing journeys. 
-              <br><br>
-              It takes courage to reach out for support, and finding a therapist who you feel connected and safe with through this process is so important. That is why I always offer a complimentary 15 minute phone call where we can get to know each other better and discover if we might be a good fit.
+            Sono la Dott.ssa Elisa Soldi, psicologa e specializzanda in psicoterapia presso il Centro di Terapia Cognitivo Comportamentale di Firenze.</p>
+            <br><br>
+            <ul class="list-disc pl-4">
+              <li>Laurea in Psicologia Clinica e della Salute presso l’Università degli Studi di Firenze. Iscritta all’Albo degli Psicologi della Toscana (n. 10113).</li>
+              <li>Corso di Alta Formazione Mindfulness Basic Training - Federmindfulness.</li>
+            </ul> 
+            <br><br>
+            <p>Spesso la sofferenza non ha un nome e si nasconde dietro una sensazione di blocco, di confusione o di stanchezza che non riusciamo a spiegarci.<br>
+            Il mio obiettivo è offrirti uno spazio accogliente, sicuro e protetto, un luogo dove la tua voce può essere ascoltata senza alcun giudizio. Insieme, potremo dare un significato a ciò che provi, esplorare le tue emozioni e i tuoi vissuti.<br>
+            Non si tratta di eliminare il dolore, ma di imparare a gestirlo, ad integrarlo e a trasformarlo in un punto di forza per la tua crescita e riorganizzazione.<br>
+            Intraprendere un percorso psicologico è un atto di coraggio e un investimento su te stesso, un passo verso una vita più consapevole. 
             </p>
           </div>
         </div>
@@ -52,15 +58,26 @@ import Expand from '../assets/expand.svg';
   </Section>
   <Section background="bg-accent italic text-center text-xl md:text-2xl">
     <!--- TODO Fare con stesso font della firma -->
-   <span class="mt-8">"Tutte le risorse di cui abbiamo bisogno sono nella nostra mente"</span>
+   <span>"</span><span id="main-quote" class="mt-8"></span><span>"</span>
   </Section>
   <Section background="bg-primary">
-    <h2 class="text-center">Cosa offro</h2>
     <div class="flex flex-col md:flex-row gap-8">
-      <CardBox title="Titolo 1">
-        <p>
-          Person-centred and trauma-focused psychotherapy for individuals over the age of 18. Meetings are offered virtually or over the phone in 50 or 75 minute increments.
-        </p>
+      <CardBox title="Consulenze e sostegno psicologico">
+        <div>
+          Offro percorsi di consulenza e supporto psicologico individuali ad adolescenti, giovani adulti e adulti per affrontare:
+          </br></br>
+          <ul class="list-disc pl-4">
+            <li>Difficoltà legate all'ansia e allo stress</li>
+            <li>Difficoltà legate all'umore</li>
+            <li>Difficoltà legate alla sfera lavorativa</li>
+            <li>Difficoltà legate alla sfera dell’alimentazione</li>
+            <li>Difficoltà in ambito relazionale e familiare</li>
+            <li>Elaborazione del lutto e della perdita</li>
+            <li>Percorsi verso il benessere e crescita personale</li>
+          </ul>
+          </br></br>
+          Consulenze psicologiche di coppia per difficoltà comunicative, conflitti e supporto alla genitorialità 
+        </div>
       </CardBox>
       <CardBox title="Tutoraggio BES e DSA">
         <div>
@@ -81,3 +98,30 @@ import Expand from '../assets/expand.svg';
     </div>
   </Section>
 </Layout>
+<script is:inline>
+  const mainQuoteEl = document.getElementById("main-quote");
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+  const quotes = [
+    "Tutte le risorse di cui abbiamo bisogno sono nella nostra mente",
+    "Non si guarisce dal passato, si impara a viverci.",
+    "Ogni storia merita di essere ascoltata, ogni persona di ritrovare la propria forza",
+    "Il cambiamento inizia quando smetti di combattere i tuoi pensieri e inizi ad ascoltarli.",
+    "Capire come funzioniamo è il primo passo per prendere il controllo della nostra vita",
+    "Ogni emozione ha una sua ragione di esistere; il nostro compito è comprenderla",
+    "Le emozioni non sono un errore da correggere, ma la bussola che dà forma e significato al nostro mondo interiore.", 
+    "Imparare ad ascoltarle è il primo passo per capirsi davvero.",
+    "Non sono i fatti a farci soffrire, ma l'interpretazione che ne diamo",
+    "Il modo in cui le persone pensano a sé stesse è il motore del loro comportamento.",
+    "Non siamo definiti dalle nostre emozioni, ma da come reagiamo ad esse.",
+    "La mente e il corpo sono in costante dialogo. Quando uno soffre, l'altro ascolta"
+  ]
+  shuffleArray(quotes);
+  let i = 0;
+  mainQuoteEl.innerHTML = quotes[i];
+  i = (i + 1) % quotes.length;
+</script>
