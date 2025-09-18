@@ -1,21 +1,82 @@
 ---
-import Hero from '../components/Hero.astro';
-import Layout from '../layouts/Layout.astro';
-import Section from '../components/Section.astro';
-import BackgroundImage from '../assets/foto/contacts.jpg'
-import ButtonLink from '../components/ButtonLink.astro';
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import BackgroundImage from "../assets/foto/contacts.jpg";
+import ButtonLink from "../components/ButtonLink.astro";
 ---
 
 <Layout>
   <Hero image={BackgroundImage}>
     <Section>
       <div class="flex flex-col items-center justify-center">
-        <h1>Cosa aspettarsi (FARE ACCORDION DOMANDE)</h1>
-        <p>Le domande più frequenti con le risposte</p>
+        <h1>Cosa aspettarsi</h1>
+        <p>Le domande più frequenti e le loro risposte</p>
       </div>
+      <br>
       <div>
+        <h3 class="accordion">Basics of Sailing</h3>
+        <div class="panel">
+          <div class="col col-4 middle">
+            <!-- <div class="space"></div> -->
+            <h4>Before Choosing a Sailboat</h4>
+            <p>
+              Before looking for a boat to buy, you need to first know what you
+              want to do with the boat, whether that is to go on vacation, learn
+              how to sail, competitions or recreational sailing.
+            </p>
+          </div>
+          <div class="col col-4 middle">
+            <!-- <div class="space"></div> -->
+            <h4>Car Topping & Trailing</h4>
+            <p>
+              It's a good practice to carry the boat upside-down to allow the
+              sides to rest on the side of the roof racks and to prevent the
+              hull from getting damaged.
+            </p>
+          </div>
+          <div class="col col-4 middle">
+            <!-- <div class="space"></div> -->
+            <h4>Safety Equipment</h4>
+            <p>
+              You have to always have to think: safety first. Sailing is a
+              dangerous and could result in severe injuries or death if the
+              proper precautions are not taken.
+            </p>
+          </div>
+        </div>
+        <h3 class="accordion">Basics of Sailing</h3>
+        <div class="panel">
+          <div class="col col-4 middle">
+            <!-- <div class="space"></div> -->
+            <h4>Before Choosing a Sailboat</h4>
+            <p>
+              Before looking for a boat to buy, you need to first know what you
+              want to do with the boat, whether that is to go on vacation, learn
+              how to sail, competitions or recreational sailing.
+            </p>
+          </div>
+          <div class="col col-4 middle">
+            <!-- <div class="space"></div> -->
+            <h4>Car Topping & Trailing</h4>
+            <p>
+              It's a good practice to carry the boat upside-down to allow the
+              sides to rest on the side of the roof racks and to prevent the
+              hull from getting damaged.
+            </p>
+          </div>
+          <div class="col col-4 middle">
+            <!-- <div class="space"></div> -->
+            <h4>Safety Equipment</h4>
+            <p>
+              You have to always have to think: safety first. Sailing is a
+              dangerous and could result in severe injuries or death if the
+              proper precautions are not taken.
+            </p>
+          </div>
+        </div>
 
-      Che cosa è il colloquio psicologico?
+        <!-- Che cosa è il colloquio psicologico?
       “è un interazione tra uno psicologo e una persona o un gruppo con l'obiettivo di comprendere i pensieri, le emozioni e i comportamenti della persona. Può avere diverse finalità, come la valutazione diagnostica o un supporto emotivo. Durante il colloquio, lo psicologo utilizza tecniche di ascolto attivo e domande mirate per favorire l'espressione del paziente ed aiutarlo a prendere consapevolezza di sè e delle proprie difficoltà.
       Quanto dura una sessione? 
       Circa 50 minuti
@@ -24,8 +85,7 @@ import ButtonLink from '../components/ButtonLink.astro';
       Come si prenota una consulenza? 
       Puoi contattarmi via email o tramite il modulo di contatto. 
       Il colloquio è riservato? 
-      Politica sulla Privacy: Tutte le informazioni condivise durante le consulenze saranno trattate in maniera confidenziale e nel rispetto del Codice Deontologico degli Psicologi.
-
+      Politica sulla Privacy: Tutte le informazioni condivise durante le consulenze saranno trattate in maniera confidenziale e nel rispetto del Codice Deontologico degli Psicologi. -->
       </div>
     </Section>
     <Section background="bg-primary">
@@ -36,3 +96,33 @@ import ButtonLink from '../components/ButtonLink.astro';
     </Section>
   </Hero>
 </Layout>
+<script is:inline>
+  const acc = document.getElementsByClassName("accordion");
+  let i;
+  let panel = null;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function (ev) {
+      closeAll(ev.target);
+      this.classList.toggle("active");
+      panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  function closeAll(tar) {
+    const accs = document.querySelectorAll(".accordion");
+    for (let i = 0; i < accs.length; i++) {
+      if (accs[i] == tar) {
+        continue;
+      }
+      accs[i].classList.remove("active");
+      const panel = accs[i].nextElementSibling;
+      panel.style.maxHeight = null;
+    }
+  }
+</script>

@@ -56,3 +56,67 @@ h3 {
   -webkit-box-shadow: 2px 2px 2px 2px var(--color-shadow);
   -moz-box-shadow: 2px 2px 2px 2px var(--color-shadow);
 }
+
+.accordion {
+  background-color: var(--color-shadow);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 21px;
+  transition: 0.4s;
+}
+
+.open,
+.accordion:hover {
+  background-color: var(--color-accent);
+  color: black;
+}
+
+.accordion:after {
+  content: "v";
+  color: #ffffff;
+  float: right;
+  font-size: 1.25em;
+  line-height: 25px;
+}
+
+.open:after {
+  content: "A";
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s ease-out;
+}
+
+.panel-body {
+  padding: 18px 0;
+}
+
+@media only screen and (min-width: 960px) {
+  .container {
+    display: table;
+    box-sizing: border-box;
+  }
+  .row .col {
+    margin: 10px 0;
+  }
+  .col {
+    display: table-cell;
+  }
+  .col.middle {
+    vertical-align: middle;
+  }
+  .col-2 {
+    width: 50%;
+    padding-right: 72px;
+  }
+  .col-4 {
+    width: 33.33333333333333333%;
+    padding-right: 72px;
+  }
+}
