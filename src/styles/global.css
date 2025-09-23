@@ -57,34 +57,55 @@ h3 {
   -moz-box-shadow: 2px 2px 2px 2px var(--color-shadow);
 }
 
-.accordion {
+.btn-link {
+  cursor: pointer;
+  background-color: var(--color-accent);
+  color: black;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem; 
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+  margin-right: 1rem; 
+  border-radius: 0.25rem; 
+  border-style: none; 
+  font-size: 0.875rem;
+  line-height: 1.25rem; 
+  font-weight: 500; 
+  transition: 0.4s;
+}
+
+.btn-link:hover {
   background-color: var(--color-shadow);
   color: #ffffff;
+}
+
+.accordion {
+  background-color: var(--color-accent);
+  color: black;
   cursor: pointer;
   padding: 18px;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 21px;
   transition: 0.4s;
 }
 
 .open,
 .accordion:hover {
-  background-color: var(--color-accent);
-  color: black;
+  background-color: var(--color-shadow);
+  color: #ffffff;
 }
 
 .accordion:after {
-  content: "v";
-  color: #ffffff;
+  margin-top: 0.3rem;
+  content: "+";
   float: right;
   font-size: 1.25em;
   line-height: 25px;
 }
 
-.open:after {
-  content: "A";
+.accordion.active:after {
+  content: "-";
 }
 
 .panel {
@@ -122,5 +143,9 @@ h3 {
 }
 
 input:user-invalid {
+  border-color: red;
+}
+
+textarea:user-invalid {
   border-color: red;
 }

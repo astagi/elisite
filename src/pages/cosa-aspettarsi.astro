@@ -8,14 +8,14 @@ import ButtonLink from "../components/ButtonLink.astro";
 
 <Layout>
   <Hero image={BackgroundImage}>
-    <Section>
+    <Section isFullHeight>
       <div class="flex flex-col items-center justify-center">
         <h1>Cosa aspettarsi</h1>
-        <p>Le domande più frequenti e le loro risposte</p>
+        <p>Una raccolta di risposte alle domande più frequenti.</p>
       </div>
       <br>
       <div>
-        <h3 class="accordion">Che cosa è il colloquio psicologico?</h3>
+        <h3 class="accordion">Che cos'è il colloquio psicologico?</h3>
         <div class="panel">
           <div class="col col-12 middle p-3">
             <!-- <div class="space"></div> -->
@@ -60,21 +60,8 @@ import ButtonLink from "../components/ButtonLink.astro";
             </p>
           </div>
         </div>
-
-        <!-- Che cosa è il colloquio psicologico?
-      “è un interazione tra uno psicologo e una persona o un gruppo con l'obiettivo di comprendere i pensieri, le emozioni e i comportamenti della persona. Può avere diverse finalità, come la valutazione diagnostica o un supporto emotivo. Durante il colloquio, lo psicologo utilizza tecniche di ascolto attivo e domande mirate per favorire l'espressione del paziente ed aiutarlo a prendere consapevolezza di sè e delle proprie difficoltà.
-      Quanto dura una sessione? 
-      Circa 50 minuti
-      È possibile fare terapia online? 
-      Si, è assolutamente possibile fare terapia online. Gli studi hanno dimostrato che è efficace tanto quanto quella in presenza. L'unica cosa che serve è una buona connessione a internet e un luogo tranquillo dove puoi parlare senza essere disturbato. Il nostro colloquio si svolgerà tramite videochiamata, utilizzando una piattaforma sicura e rispettosa della privacy. In questo modo, potrai accedere alla terapia comodamente da casa tua o da qualsiasi altro luogo in cui ti senti a tuo agio.
-      Come si prenota una consulenza? 
-      Puoi contattarmi via email o tramite il modulo di contatto. 
-      Il colloquio è riservato? 
-      Politica sulla Privacy: Tutte le informazioni condivise durante le consulenze saranno trattate in maniera confidenziale e nel rispetto del Codice Deontologico degli Psicologi. -->
       </div>
-    </Section>
-    <Section background="bg-primary">
-      
+      <br/>
       <h3 class="text-center mt-6">
         Hai altre domande?
         <ButtonLink href="/contatti">Contattami!</ButtonLink>
