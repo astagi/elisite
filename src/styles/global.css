@@ -120,3 +120,7 @@ h3 {
     padding-right: 72px;
   }
 }
+
+input:user-invalid {
+  border-color: red;
+}
