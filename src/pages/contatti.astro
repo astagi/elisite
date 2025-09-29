@@ -1,11 +1,10 @@
 ---
-import Hero from '../components/Hero.astro';
-import Layout from '../layouts/Layout.astro';
-import Section from '../components/Section.astro';
-import WhatsappIcon from '../assets/whatsapp.svg';
-import EmailIcon from '../assets/mail.svg';
-import { Image } from 'astro:assets';
-import BackgroundImage from '../assets/foto/contacts.jpg'
+import Hero from "../components/Hero.astro";
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import EmailIcon from "../assets/mail.svg";
+import { Image } from "astro:assets";
+import BackgroundImage from "../assets/foto/contacts.jpg";
 ---
 
 <Layout>
@@ -13,56 +12,163 @@ import BackgroundImage from '../assets/foto/contacts.jpg'
     <Section>
       <div class="flex flex-col items-center justify-center">
         <h1>Contatti</h1>
-        <p> Ricevo su appuntamento online. Per maggiori informazioni o per fissare un colloquio, puoi contattarmi all’indirizzo email</p>
+        <p>
+          Ricevo su appuntamento online. Per maggiori informazioni o per fissare
+          un colloquio, puoi contattarmi all’indirizzo email
+        </p>
         <div class="columns-1 lg:columns-1 gap-8 m-8">
           <div>
             <a href="mailto:elisasoldipsi@gmail.com">
-              <Image src={EmailIcon} class="inline" alt="Icona mail" style="width: 2rem;height: auto;" /> 
-              elisasoldipsi@gmail.com        
-            </a>  
+              <Image
+                src={EmailIcon}
+                class="inline"
+                alt="Icona mail"
+                style="width: 2rem;height: auto;"
+              />
+              elisasoldipsi@gmail.com
+            </a>
           </div>
         </div>
         <p class="mb-8">Oppure, se preferisci, compila i campi qua sotto.</p>
       </div>
       <div>
-        <form class="w-full max-w-lg m-auto" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="2f2f6251-fc54-432c-aa36-5252a1e6366f">
-            <div class="flex flex-wrap -mx-3 mb-6">
-              <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="input-name">
-                  Nome *
-                </label>
-                <input class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white" id="input-name" name="nome" type="text" required>
-                <!-- <p class="text-red text-xs italic text-right">Please fill out this field.</p> -->
-              </div>
-              <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="input-email">
-                  Email *
-                </label>
-                <input class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white" id="input-email" name="email" type="email" required>
-              </div>
-              <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="input-telephone">
-                  Telefono
-                </label>
-                <input class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white" id="input-telephone" name="telefono" type="text">
-              </div>
+        <form
+          class="w-full max-w-lg m-auto"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          id="form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="2f2f6251-fc54-432c-aa36-5252a1e6366f"
+          />
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label
+                class="block uppercase tracking-wide text-xs font-bold mb-2"
+                for="input-name"
+              >
+                Nome *
+              </label>
+              <input
+                class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white"
+                id="input-name"
+                name="nome"
+                type="text"
+                required
+              />
+              <!-- <p class="text-red text-xs italic text-right">Please fill out this field.</p> -->
             </div>
-            <div class="flex flex-wrap -mx-3 mb-1">
-              <div class="w-full px-3">
-                <label class="block uppercase tracking-wide text-xs font-bold mb-2" for="text-request">
-                  Motivo della tua richiesta *
-                </label>
-                <textarea class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white" name="richiesta" id="text-request" required></textarea>
-              </div>
+            <div class="w-full px-3">
+              <label
+                class="block uppercase tracking-wide text-xs font-bold mb-2"
+                for="input-email"
+              >
+                Email *
+              </label>
+              <input
+                class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white"
+                id="input-email"
+                name="email"
+                type="email"
+                required
+              />
             </div>
-            <p class="text-xs italic mb-5">* Campo obbligatorio</p>
-            <div class="text-center">
-              <button class="btn-link" type="submit">Invia</button>
+            <div class="w-full px-3">
+              <label
+                class="block uppercase tracking-wide text-xs font-bold mb-2"
+                for="input-telephone"
+              >
+                Telefono
+              </label>
+              <input
+                class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white"
+                id="input-telephone"
+                name="telefono"
+                type="text"
+              />
             </div>
-          </form>
-          <p class="mt-8 text-xs italic text-center">Tutti i dati saranno trattati in ottemperanza alle vigenti leggi sulla privacy e nel rispetto del Codice Deontologico degli Psicologi Italiani.</p>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-1">
+            <div class="w-full px-3">
+              <label
+                class="block uppercase tracking-wide text-xs font-bold mb-2"
+                for="text-request"
+              >
+                Motivo della tua richiesta *
+              </label>
+              <textarea
+                class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight bg-white"
+                name="richiesta"
+                id="text-request"
+                required></textarea>
+            </div>
+          </div>
+          <p class="text-xs italic mb-5">* Campo obbligatorio</p>
+          <div class="text-center">
+            <button class="btn-link" type="submit" id="submitbtn">Invia</button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+        <p class="mt-8 text-xs italic text-center">
+          Tutti i dati saranno trattati in ottemperanza alle vigenti leggi sulla
+          privacy e nel rispetto del Codice Deontologico degli Psicologi
+          Italiani.
+        </p>
       </div>
     </Section>
   </Hero>
 </Layout>
+
+<script is:inline>
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+  const btnSubmit = document.getElementById("submitbtn");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Invio della richiesta in corso...";
+    btnSubmit.hidden = true;
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = json.message;
+          result.classList.remove("text-gray-500");
+          result.classList.add("text-green-500");
+        } else {
+          console.log(response);
+          result.innerHTML = json.message;
+          result.classList.remove("text-gray-500");
+          result.classList.add("text-red-500");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Qualcosa è andato storto! Riprova..";
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      }).finally(function () {
+        setTimeout(() => {
+          btnSubmit.hidden = false;
+        }, 5000);
+      })
+  });
+</script>
