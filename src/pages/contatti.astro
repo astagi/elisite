@@ -10,7 +10,7 @@ import BackgroundImage from '../assets/foto/contacts.jpg'
 
 <Layout>
   <Hero image={BackgroundImage}>
-    <Section isFullHeight>
+    <Section>
       <div class="flex flex-col items-center justify-center">
         <h1>Contatti</h1>
         <p> Ricevo su appuntamento online. Per maggiori informazioni o per fissare un colloquio, puoi contattarmi all’indirizzo email</p>
@@ -23,7 +23,9 @@ import BackgroundImage from '../assets/foto/contacts.jpg'
           </div>
         </div>
         <p class="mb-8">Oppure, se preferisci, compila i campi qua sotto.</p>
-        <form class="w-full max-w-lg" action="https://api.web3forms.com/submit" method="POST">
+      </div>
+      <div>
+        <form class="w-full max-w-lg m-auto" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="2f2f6251-fc54-432c-aa36-5252a1e6366f">
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3">
@@ -62,6 +64,5 @@ import BackgroundImage from '../assets/foto/contacts.jpg'
           <p class="mt-8 text-xs italic">Tutti i dati saranno trattati in ottemperanza alle vigenti leggi sulla privacy e nel rispetto del Codice Deontologico degli Psicologi Italiani.</p>
       </div>
     </Section>
-    <Section background="bg-primary"></Section>
   </Hero>
 </Layout>
