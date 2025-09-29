@@ -1,9 +1,9 @@
 ---
-const { background, isFullHeight } = Astro.props;
+const { background, isFullHeight, padded } = Astro.props;
 ---
 
 <div class:list={[background, { 'h-screen': isFullHeight }]}>
-    <div class="mx-auto w-full max-w-screen-xl" class:list={{ 'p-8': !isFullHeight }}>
+    <div class="mx-auto w-full max-w-screen-xl" class:list={{ 'p-8': padded }}>
         <slot></slot>
     </div>
 </div>

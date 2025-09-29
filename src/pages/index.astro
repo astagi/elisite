@@ -30,7 +30,7 @@ import Expand from '../assets/expand.svg';
       </div>
     </Section>
   </Hero>
-  <Section background="bg-primary md:px-60">
+  <Section background="bg-primary md:px-60" padded>
     <div id="me" class="flex flex-col md:flex-row">
         <div class="flex-1 md:mt-4">
           <Image src={mainPhoto} width={200} class="img-shadow mb-8 border-none rounded mx-auto md:mx-0" alt="Elisa Soldi immagine" />
@@ -56,11 +56,11 @@ import Expand from '../assets/expand.svg';
     </div>
     <!-- <span>Testo testo testo</span> -->
   </Section>
-  <Section background="bg-accent italic text-center text-xl md:text-2xl">
+  <Section background="bg-accent italic text-center text-xl md:text-2xl" padded>
     <!--- TODO Fare con stesso font della firma -->
    <span>"</span><span id="main-quote" class="mt-8"></span><span>"</span>
   </Section>
-  <Section background="bg-primary">
+  <Section background="bg-primary" padded>
     <div class="flex flex-col md:flex-row gap-8">
       <CardBox title="Consulenze e sostegno psicologico">
         <div>
@@ -92,8 +92,8 @@ import Expand from '../assets/expand.svg';
       </CardBox>
     </div>
   </Section>
-  <Section background="bg-primary">
-    <div class="text-center mt-6">
+  <Section background="bg-primary" padded>
+    <div class="text-center mt-3 mb-6">
       <ButtonLink href="/contatti">Prenota un appuntamento</ButtonLink>
     </div>
   </Section>
