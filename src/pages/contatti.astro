@@ -109,7 +109,7 @@ import BackgroundImage from "../assets/foto/contacts.jpg";
           <div class="text-center">
             <button class="btn-link" type="submit" id="submitbtn">Invia</button>
           </div>
-          <p class="text-base text-center text-gray-400" id="result"></p>
+          <p class="text-center uppercase tracking-wide font-bold" id="result"></p>
         </form>
         <p class="mt-8 text-xs italic text-center">
           Tutti i dati saranno trattati in ottemperanza alle vigenti leggi sulla
@@ -133,7 +133,7 @@ import BackgroundImage from "../assets/foto/contacts.jpg";
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    result.innerHTML = "Invio della richiesta in corso...";
+    result.innerHTML = "✉️ Invio della richiesta in corso...";
     btnSubmit.hidden = true;
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -146,19 +146,14 @@ import BackgroundImage from "../assets/foto/contacts.jpg";
       .then(async (response) => {
         let json = await response.json();
         if (response.status == 200) {
-          result.innerHTML = json.message;
-          result.classList.remove("text-gray-500");
-          result.classList.add("text-green-500");
+          result.innerHTML = "✅ Richiesta inviata con successo!";
         } else {
-          console.log(response);
           result.innerHTML = json.message;
-          result.classList.remove("text-gray-500");
-          result.classList.add("text-red-500");
         }
       })
       .catch((error) => {
         console.log(error);
-        result.innerHTML = "Qualcosa è andato storto! Riprova..";
+        result.innerHTML = "❌ Qualcosa è andato storto! Riprova..";
       })
       .then(function () {
         form.reset();
