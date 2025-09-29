@@ -90,7 +90,7 @@ h3 {
   transition: 0.4s;
 }
 
-.open,
+.active,
 .accordion:hover {
   background-color: var(--color-shadow);
   color: #ffffff;
