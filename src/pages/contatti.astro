@@ -112,14 +112,15 @@ import BackgroundImage from "../assets/foto/contacts.jpg";
                 required></textarea>
             </div>
           </div>
-          <p class="text-xs italic mb-5">* Campo obbligatorio</p>
-          <div
-            class="h-captcha"
-            data-captcha="true"
-            data-lang="it"
-            data-theme="dark"
-          >
+          <div class="flex flex-wrap -mx-3 mb-1">
+            <div
+              class="h-captcha m-auto mb-3"
+              data-captcha="true"
+              data-lang="it"
+            >
+            </div>
           </div>
+          <p class="text-xs italic mb-5">* Campo obbligatorio</p>
 
           <div class="text-center">
             <button class="btn-link" type="submit" id="submitbtn">Invia</button>
@@ -138,7 +139,7 @@ import BackgroundImage from "../assets/foto/contacts.jpg";
   </Hero>
 </Layout>
 
-<script is:inline src="https://web3forms.com/client/script.js" async defer></script>
+<script is:inline src="https://web3forms.com/client/script.js"></script>
 
 <script is:inline>
   const form = document.getElementById("form");
@@ -152,12 +153,14 @@ import BackgroundImage from "../assets/foto/contacts.jpg";
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+    const hCaptcha = form.querySelector(
+      "textarea[name=h-captcha-response]",
+    ).value;
 
     if (!hCaptcha) {
-        e.preventDefault();
-        result.innerHTML = "☑️ Per favore riempi il campo captcha";
-        return;
+      e.preventDefault();
+      result.innerHTML = "☑️ Per favore riempi il campo captcha";
+      return;
     }
 
     result.innerHTML = "✉️ Invio della richiesta in corso...";
