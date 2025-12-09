@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-import studioPhoto  from '../assets/foto/studio.jpg';
 const { image } = Astro.props;
 ---
 
@@ -10,12 +9,14 @@ const { image } = Astro.props;
 >
     <!-- - img-->
     <div class="absolute w-full h-full top-0 overflow-hidden" style="background-color: white;">
+    {(image) &&
         <Image
             class="h-screen w-auto hero-image max-w-none"
-            src={image || studioPhoto}
+            src={image || ""}
             title="titolo immagine"
             alt="descrizione immagine"
         />
+    }
         <span class="absolute w-full h-full top-0 left-0" style="content: ''; background: rgba(238, 231, 223, .8);"></span>
     </div>
     <!-- - texts-->

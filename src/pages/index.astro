@@ -6,6 +6,7 @@ import CardBox from '../components/CardBox.astro';
 import Section from '../components/Section.astro';
 
 import { Image } from 'astro:assets';
+import studioPhoto  from '../assets/foto/studio.jpg';
 import mainPhoto  from '../assets/foto/elisa_soldi_foto_resized.png';
 import Logo from '../assets/sign.svg';
 import Expand from '../assets/expand.svg';
@@ -13,7 +14,7 @@ import Expand from '../assets/expand.svg';
 ---
 
 <Layout>
-  <Hero>
+  <Hero image={studioPhoto}>
     <Section isFullHeight>
       <div class="flex flex-col items-center text-center justify-center h-screen-90">
         <div class="max-w-full inline">
